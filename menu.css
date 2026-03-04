@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-hero {
+    background-image: url('./images/menu-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu-hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.menu-hero p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0;
+    color: #ffffff;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.menus ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menus ul li {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.menus ul li.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+    transition: all 0.3s ease;
+}
+
+.active-section {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 2em;
+    justify-content: center;
+}
+
+.active-section .active-items-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.active-item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.active-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.active-item span{
+    font-size: 1rem;
+    color: rgb(94, 1, 1);
+}
+
+.active-item.selected h3{
+    color: darkgreen;
+}
+
+/* -- image sub-section styles -- */
+.active-item-image {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.active-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .menu-hero {
+        height: 30vh;
+    }
+
+    .menu-hero h1{
+        font-size: 2rem;
+    }
+
+    .menu-hero p{
+        font-size: 1rem;
+    }
+
+    .menus {
+        padding: 1em;
+    }
+
+    .menus .active-section {
+        width: 100%;
+    }
+
+    .active-section .active-item-image{
+        display: none;
+    }
+
+
+}
