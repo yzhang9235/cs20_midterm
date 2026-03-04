@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wine List | Vino & Amore</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="wine_style.css" />
+</head>
+
+<body>
+
+<header>
+<a href="home.html" class="name">Vino & Amore</a>
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="wine.html">Wine List</a></li>
+<li><a href="#">Specials</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Location</a></li>
+<li><a href="contacts.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="wine-hero">
+<div class="wine-hero-content">
+<h1>Our Wine List</h1>
+<p>A curated cellar celebrating Italy's finest regions and beyond.</p>
+</div>
+</section>
+
+<section class="wines"></section>
+
+<script>
+
+const wineSection = document.querySelector(".wines");
+
+const wineItems = [
+        {
+          section: "By the Glass",
+          items: [
+            {
+              name: "Prosecco di Valdobbiadene",
+              sub: "Veneto, Italy · Brut",
+              description:
+                "Fine persistent bubbles, green apple, white peach, and a clean mineral finish. Perfect aperitivo.",
+              glass: 13,
+              bottle: 52,
+              image: "images/prosecco.jpg",
+            },
+            {
+              name: "Pinot Grigio delle Venezie",
+              sub: "Friuli-Venezia Giulia, Italy · DOC",
+              description:
+                "Crisp citrus, pear, and subtle almond notes with a refreshing acidity. A classic companion to seafood.",
+              glass: 12,
+              bottle: 46,
+              image: "images/pinot.jpg",
+            },
+            {
+              name: "Vermentino di Sardegna",
+              sub: "Sardinia, Italy · DOC",
+              description:
+                "Aromatic herbs, grapefruit, and a faint bitter almond finish. Wonderful with our Caprese and light pastas.",
+              glass: 14,
+              bottle: 55,
+              image: "images/ver.jpg",
+            },
+            {
+              name: "Cerasuolo d'Abruzzo",
+              sub: "Abruzzo, Italy · DOC",
+              description:
+                "Deep cherry-rose hue, wild strawberry, and violets with a dry, food-friendly structure.",
+              glass: 13,
+              bottle: 50,
+              image: "images/cerasuolo.jpg",
+            },
+            {
+              name: "Chianti Classico",
+              sub: "Tuscany, Italy · DOCG",
+              description:
+                "Sour cherry, leather, dried herbs, and firm Sangiovese tannins. A natural partner for pasta al ragù.",
+              glass: 15,
+              bottle: 60,
+              image: "images/chianti.jpg",
+            },
+            {
+              name: "Primitivo di Manduria",
+              sub: "Puglia, Italy · DOC",
+              description:
+                "Rich dark plum, chocolate, and spice. Full-bodied and generous — ideal with our secondi.",
+              glass: 16,
+              bottle: 64,
+              image: "images/primitivo.jpg",
+            },
+          ],
+        },
+        {
+          section: "Red Wines",
+          items: [
+            {
+              name: "Brunello di Montalcino",
+              sub: "Biondi-Santi · 2017",
+              description:
+                "Iron, dried cherry, tobacco, and cedar. Legendary structure and longevity.",
+              bottle: 185,
+              image: "images/brunello.jpg",
+            },
+            {
+              name: "Chianti Classico Riserva",
+              sub: "Antinori · 2019",
+              description:
+                "Bright cherry, plum, violet, with earthy undertones and elegant tannins.",
+              glass: 18,
+              bottle: 72,
+              image: "images/chianti_riserva.jpg",
+            },
+            {
+              name: 'Barolo "Castiglione"',
+              sub: "Vietti · 2018",
+              description:
+                "Roses, tar, cherry, and truffle. The king of Italian wines at its finest.",
+              bottle: 155,
+              image: "images/barolo.jpg",
+            },
+            {
+              name: "Nero d'Avola Riserva",
+              sub: "Donnafugata · 2019",
+              description:
+                "Ripe plum, cocoa, and Mediterranean herbs on a warm, generous palate.",
+              glass: 14,
+              bottle: 56,
+              image: "images/nero_davola.jpg",
+            },
+          ],
+        },
+        {
+          section: "White Wines",
+          items: [
+            {
+              name: "Soave Classico",
+              sub: "Pieropan · 2022",
+              description:
+                "White flowers, almond, and citrus with a characteristic volcanic minerality.",
+              glass: 13,
+              bottle: 50,
+              image: "images/soave.jpg",
+            },
+            {
+              name: "Gavi di Gavi",
+              sub: 'La Scolca "Black Label" · 2021',
+              description:
+                "Elegant citrus, green apple, and subtle floral notes with crisp minerality.",
+              glass: 15,
+              bottle: 62,
+              image: "images/gavi.jpg",
+            },
+            {
+              name: "Greco di Tufo",
+              sub: "Feudi di San Gregorio · 2022",
+              description:
+                "Peach, apricot, and volcanic minerals. A stunning white from Campania.",
+              glass: 14,
+              bottle: 56,
+              image: "images/greco.jpg",
+            },
+            {
+              name: "Fiano di Avellino",
+              sub: "Mastroberardino · 2021",
+              description:
+                "Hazelnut, honey, and toasted notes with extraordinary length and complexity.",
+              glass: 15,
+              bottle: 60,
+              image: "images/fiano.jpg",
+            },
+          ],
+        },
+        {
+          section: "Sparkling",
+          items: [
+            {
+              name: "Franciacorta Brut",
+              sub: "Bellavista · NV",
+              description:
+                "Italy's answer to Champagne. Toasted brioche, citrus zest, and fine persistent mousse.",
+              glass: 18,
+              bottle: 78,
+              image: "images/franciacorta.jpg",
+            },
+            {
+              name: "Prosecco Superiore DOCG",
+              sub: 'Ruggeri "Quartese" · NV',
+              description:
+                "Lively green apple, white peach, and floral aromas with a clean, refreshing finish.",
+              glass: 13,
+              bottle: 52,
+              image: "images/prosecco_superiore.jpg",
+            },
+            {
+              name: "Champagne Brut Réserve",
+              sub: "Billecart-Salmon · NV",
+              description:
+                "Exceptional freshness with brioche, citrus, and chalky minerality. Timeless elegance.",
+              glass: 24,
+              bottle: 115,
+              image: "images/champagne_brut.jpg",
+            },
+            {
+              name: "Champagne Rosé",
+              sub: "Billecart-Salmon · NV",
+              description:
+                "Delicate salmon hue, wild strawberry, and rose petal with a silky persistent mousse.",
+              glass: 28,
+              bottle: 135,
+              image: "images/champagne_rose.jpg",
+            },
+          ],
+        },
+        {
+          section: "Dessert & Digestivi",
+          items: [
+            {
+              name: "Vin Santo del Chianti Classico (50ml)",
+              sub: "Antinori · 2015",
+              description:
+                "Amber, dried apricot, hazelnut, and honey. Extraordinary with our cantucci.",
+              glass: 16,
+              bottleLabel: "Half Bottle",
+              bottle: 68,
+              image: "images/vinsanto.jpg",
+            },
+            {
+              name: "Moscato d'Asti",
+              sub: "Vietti · 2022",
+              description:
+                "Lightly sparkling, orange blossom, peach, and fresh apricot. Low alcohol and irresistible.",
+              glass: 12,
+              bottle: 45,
+              image: "images/moscato.jpg",
+            },
+            {
+              name: "Limoncello di Capri (30ml)",
+              sub: "Served chilled",
+              description:
+                "Intensely fragrant Amalfi lemon liqueur. The quintessential Italian ending.",
+              glass: 9,
+              image: "images/limoncello.jpg",
+            },
+            {
+              name: "Grappa di Brunello (20ml)",
+              sub: "Jacopo Poli",
+              description:
+                "Single-varietal grappa from Brunello pomace. Elegant floral notes, clean and warming.",
+              glass: 14,
+              image: "images/grappa.jpg",
+            },
+            {
+              name: "Amaro Montenegro (30ml)",
+              sub: "Served neat or over ice",
+              description:
+                "40 botanicals, orange peel, and spice. Beloved across Italy after dinner.",
+              glass: 11,
+              image: "images/amaro.jpg",
+            },
+            {
+              name: "Nocino (20ml)",
+              sub: "Poli",
+              description:
+                "Dark walnut liqueur with warming spices and a long bittersweet finish. A northern Italian gem.",
+              glass: 12,
+              image: "images/nocino.jpg",
+            },
+          ],
+        },
+      ];
+
+
+const tabs = document.createElement("ul");
+
+wineItems.forEach((section,i)=>{
+
+const li = document.createElement("li");
+li.textContent = section.section;
+
+if(i===0) li.classList.add("active");
+
+li.addEventListener("click",()=>{
+updateActiveSection(section.section);
+renderSection();
+});
+
+tabs.appendChild(li);
+
+});
+
+wineSection.appendChild(tabs);
+
+const activeSection = document.createElement("div");
+activeSection.classList.add("active-section");
+
+wineSection.appendChild(activeSection);
+
+let active = wineItems[0].section;
+
+function updateActiveSection(section){
+
+active = section;
+
+tabs.querySelectorAll("li").forEach(li=>{
+li.classList.remove("active");
+if(li.textContent===section) li.classList.add("active");
+});
+
+}
+
+function renderSection(){
+
+activeSection.innerHTML="";
+
+const items = wineItems.find(x=>x.section===active).items;
+
+const list = document.createElement("ol");
+list.classList.add("active-items-list");
+
+items.forEach(item=>{
+
+const row = document.createElement("li");
+row.classList.add("active-item");
+
+const h3 = document.createElement("h3");
+h3.textContent = item.name;
+
+const sub = document.createElement("p");
+sub.classList.add("sub");
+sub.textContent = item.sub;
+
+const desc = document.createElement("p");
+desc.classList.add("desc");
+desc.textContent = item.description;
+
+const priceRow = document.createElement("div");
+priceRow.classList.add("price-row");
+
+if(item.glass){
+const g = document.createElement("span");
+g.textContent = `Glass $${item.glass.toFixed(2)}`;
+priceRow.appendChild(g);
+}
+
+if(item.bottle){
+const b = document.createElement("span");
+b.classList.add("bottle");
+b.textContent = `Bottle $${item.bottle.toFixed(2)}`;
+priceRow.appendChild(b);
+}
+
+row.appendChild(h3);
+row.appendChild(sub);
+row.appendChild(desc);
+row.appendChild(priceRow);
+
+list.appendChild(row);
+
+});
+
+const imageDiv = document.createElement("div");
+imageDiv.classList.add("active-item-image");
+
+const img = document.createElement("img");
+img.src = "images/placeholder.jpg";
+
+imageDiv.appendChild(img);
+
+activeSection.appendChild(list);
+activeSection.appendChild(imageDiv);
+
+}
+
+renderSection();
+
+</script>
+
+<footer>
+
+<h3>Contact Us</h3>
+
+<p>📍 123 Newbury Street, Boston, MA</p>
+<p>📞 (617) 123-4567</p>
+
+<p>🕒 Mon-Thu: 11:00 AM - 9:00 PM</p>
+<p>Fri-Sat: 11:00 AM - 11:00 PM</p>
+<p>Sun: Closed</p>
+
+<div class="footer-bottom">
+© 2026 La Trattoria. All rights reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
