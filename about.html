@@ -1,0 +1,165 @@
+<html>
+    <style>
+
+    .about-container {
+        display: flex;
+        min-height: 80vh;
+        background-color: #e8e8e6; 
+        align-items: stretch;
+    }
+
+
+    .about-image {
+        flex: 1.2;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+    }
+
+
+    .vertical-links {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        z-index: 5;
+        text-align: right;
+    }
+
+    .vertical-links a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        font-family: sans-serif; 
+    }
+
+
+    .about-content {
+        flex: 1;
+        padding: 80px 8% 80px 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-header {
+        margin-bottom: 40px;
+    }
+
+
+    .script-text {
+        font-family: 'Brush Script MT', cursive; 
+        font-size: 32px;
+        color: #2c2c2c;
+        display: block;
+        margin-bottom: -10px;
+        margin-left: -5px;
+    }
+
+    .display-name {
+        font-size: 42px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .about-body {
+        max-width: 480px;
+    }
+
+    .about-body p {
+        font-family: 'Times New Roman', serif;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 25px;
+    }
+
+
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+        }
+        .about-image {
+            height: 50vh;
+        }
+        .about-content {
+            padding: 40px 20px;
+        }
+    }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- make sure it works on all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vino & Amore | About Us</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href = "home.html" class="name">Vino & Amore</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Wine List</a></li>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="about-container">
+            <div class="about-image">
+                <!-- needs to figure our side bar here -->
+                <!-- <div class="vertical-links">
+                    <a href="#">FRIENDS</a>
+                    <a href="#">PRESS</a>
+                </div> -->
+                <img src="chef.jpg" alt="Profile">
+            </div>
+
+            <div class="about-content">
+                <div class="about-header">
+                    <span class="script-text">The Chief</span>
+                    <h2 class="display-name">Michael Scelfo</h2>
+                </div>
+                
+                <div class="about-body">
+                    <p>Michae's passion for the culinary arts was born in family kitchens, where he absorbed all he could about his heritage through food and cooking.</p>
+                    <p>He was always enamored with the energy and bustle in those kitchens as everyone lent hands to make even the most modest of weekend lunches feel like memorable feasts.</p>
+                    <p>His first cooking jobs were all centered around pizza and his deep love for the dish has only grown throughout the years. Michael, known for his American and Italian fare, owns internationally acclaimed restaurants, Alden & Harlow, Waypoint and The Longfellow Bar, where he has extended the concept of the domestic kitchen table.</p>
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            <h3>Contact Us</h3>
+
+            <p>📍 123 Newbury Street, Boston, MA</p>
+            <p>📞 (617) 123-4567</p>
+
+            <p>🕒 Mon-Thu: 11:00 AM - 9:00 PM</p>
+            <p>Fri-Sat: 11:00 AM - 11:00 PM</p>
+            <p>Sun: Closed</p>
+
+            <div class="footer-bottom">
+                © 2026 La Trattoria. All rights reserved.
+            </div>
+        </footer>
+
+    </body>
+</html>
