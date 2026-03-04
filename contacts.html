@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Italian restaurant, Boston, reservations, contact, Vino & Amore, pasta, wine" />
+  <title>Vino & Amore | Contact & Location</title>
+
+  <link rel="stylesheet" href="contacts_style.css" />
+
+  <style>
+    .contact-hero {
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header + Nav borrowed from home.html -->
+  <header>
+    <div class="name">
+      <a class="logo-link" href="home.html">Vino & Amore</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="wine.html">Wine List</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="photos.html">Gallery</a></li>
+        <li><a href="reservations.html">Location</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page title (one h1) -->
+    <section class="contact-hero">
+      <h1>Contact & Location</h1>
+      <p class="page-subtitle">Questions, events, or catering? We'd love to hear from you.</p>
+    </section>
+
+    <!-- 2-column layout: left info, right form -->
+    <section class="contact-container">
+      <!-- LEFT COLUMN: info + map + lists -->
+      <div class="contact-left">
+        <h2>Find Us</h2>
+
+        <div class="info-card">
+          <h3>Address</h3>
+          <p>123 Newbury Street, Boston, MA</p>
+
+          <h3>Phone</h3>
+          <p>Main: (617) 123-4567</p>
+          <p>Reservations: (617) 555-0199</p>
+
+          <h3>Email</h3>
+          <p>General: hello@vinoamore.com</p>
+          <p>Events: events@vinoamore.com</p>
+
+          <h3>Hours</h3>
+          <p>Mon–Thu: 11:00 AM – 9:00 PM</p>
+          <p>Fri–Sat: 11:00 AM – 11:00 PM</p>
+          <p>Sun: Closed</p>
+        </div>
+
+        <div class="info-card">
+          <h2>Getting Here</h2>
+
+          <h3>Parking</h3>
+          <!-- Non-navigation UL requirement -->
+          <ul class="tips-list">
+            <li>Street parking is available after 6 PM.</li>
+            <li>Garage parking: “Copley Place Garage” (5–7 min walk).</li>
+            <li>Validated parking for events (ask in advance).</li>
+          </ul>
+
+          <h3>Public Transit</h3>
+          <ul class="tips-list">
+            <li>Green Line: Copley station (6 min walk).</li>
+            <li>Bus: Route 39 stops nearby.</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h2>Map</h2>
+          <!-- iframe placeholder -->
+          <!-- reference: https://www.w3schools.com/html/html_iframe.asp -->
+          <div class="map-wrap">
+            <iframe
+              title="Map to Vino & Amore"
+              src="https://www.google.com/maps?q=123%20Newbury%20Street%20Boston%20MA&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: validated contact form -->
+      <div class="contact-right">
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="fullName">Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your name" />
+            <small class="error" id="errName"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+            <small class="error" id="errEmail"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(###) ###-####" />
+            <small class="error" id="errPhone"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject">
+              <option value="">Choose a topic</option>
+              <option value="general">General Question</option>
+              <option value="events">Private Events</option>
+              <option value="catering">Catering</option>
+              <option value="feedback">Feedback</option>
+            </select>
+            <small class="error" id="errSubject"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" placeholder="How can we help?"></textarea>
+            <small class="error" id="errMessage"></small>
+          </div>
+
+          <div class="form-row checkbox-row">
+            <label>
+              <input type="checkbox" id="consent" />
+              I agree to be contacted back about this request.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-dark">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Thank-you modal -->
+    <div class="modal" id="thankYouModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <h2 id="modalTitle">Thank you!</h2>
+        <p>We received your message and will get back to you soon.</p>
+        <button class="btn-dark" id="closeModalBtn" type="button">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Contact Us</h3>
+
+    <p>📍 123 Newbury Street, Boston, MA</p>
+    <p>📞 (617) 123-4567</p>
+
+    <p>🕒 Mon-Thu: 11:00 AM - 9:00 PM</p>
+    <p>Fri-Sat: 11:00 AM - 11:00 PM</p>
+    <p>Sun: Closed</p>
+
+    <div class="footer-bottom">
+      © 2026 La Trattoria. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+    const errName = document.getElementById("errName");
+    const errEmail = document.getElementById("errEmail");
+    const errSubject = document.getElementById("errSubject");
+    const errMessage = document.getElementById("errMessage");
+
+    function clearError(inputEl, errEl) {
+      errEl.textContent = "";
+      inputEl.classList.remove("input-error");
+    }
+
+    function setError(inputEl, errEl, msg) {
+      errEl.textContent = msg;
+      inputEl.classList.add("input-error");
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // clear old errors
+      [ [fullName, errName], [email, errEmail], [subject, errSubject], [message, errMessage] ]
+        .forEach(([input, err]) => clearError(input, err));
+
+      let ok = true;
+
+      if (fullName.value.trim() === "") {
+        setError(fullName, errName, "Please enter your name.");
+        ok = false;
+      }
+
+      if (!isValidEmail(email.value)) {
+        setError(email, errEmail, "Please enter a valid email.");
+        ok = false;
+      }
+
+      if (subject.value === "") {
+        setError(subject, errSubject, "Please choose a subject.");
+        ok = false;
+      }
+
+      if (message.value.trim().length < 10) {
+        setError(message, errMessage, "Message should be at least 10 characters.");
+        ok = false;
+      }
+
+      if (ok) {
+        alert("Thank you! We received your message and will get back to you soon.");
+        form.reset();
+      }
+    });
+  });
+</script>
+</body>
+</html>
