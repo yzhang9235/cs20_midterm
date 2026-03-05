@@ -4,8 +4,6 @@ padding:0;
 width:100%;
 }
 
-/* HERO */
-
 .wine-hero{
 background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1400&q=80');
 background-size:cover;
@@ -29,7 +27,6 @@ font-size:1.5rem;
 margin-top:.5rem;
 }
 
-/* MAIN CONTAINER */
 
 .wines{
 display:flex;
@@ -39,7 +36,6 @@ gap:2em;
 padding:2em 0;
 }
 
-/* TABS */
 
 .wines ul{
 list-style:none;
@@ -65,7 +61,6 @@ color:white;
 border-color:#333;
 }
 
-/* CONTENT SECTION */
 
 .active-section{
 width:80%;
@@ -73,7 +68,6 @@ display:flex;
 gap:2em;
 }
 
-/* LIST */
 
 .active-items-list{
 list-style:none;
@@ -97,7 +91,6 @@ font-size:1.2rem;
 text-decoration:underline;
 }
 
-/* hover highlight */
 
 .active-item:hover h3{
 color:darkgreen;
@@ -127,7 +120,6 @@ color:rgb(94,1,1);
 color:#333;
 }
 
-/* IMAGE */
 
 .active-item-image{
 width:50%;
@@ -140,7 +132,6 @@ height:100%;
 object-fit:cover;
 }
 
-/* MOBILE */
 
 @media(max-width:768px){
 
