@@ -19,6 +19,7 @@ header {
 
 /* for the big title name */
 .name {
+  text-decoration: none;
   font-family: 'Times New Roman', serif; 
   font-size: 36px;  
   font-weight: 300;
