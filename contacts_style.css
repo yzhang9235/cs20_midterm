@@ -159,7 +159,6 @@ header {
   color: inherit;
 }
 
-/* Optional active nav style */
 nav ul li a.active {
   color: #a0522d;
   border-bottom: 1px solid #a0522d;
@@ -272,7 +271,7 @@ nav ul li a.active {
 }
 
 .input-error {
-  border-color: #b00020 !important;
+  border-color: #b00020;
 }
 
 .btn-dark {
@@ -289,30 +288,6 @@ nav ul li a.active {
 
 .btn-dark:hover {
   background: #a0522d;
-}
-
-/* Modal */
-.modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  z-index: 100;
-}
-
-.modal.show {
-  display: flex;
-}
-
-.modal-card {
-  background: #fff;
-  width: min(520px, 100%);
-  padding: 24px;
-  border-radius: 6px;
-  text-align: center;
 }
 
 /* Responsive down to 400px */
