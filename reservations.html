@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Italian restaurant, Boston, reservations, Vino & Amore, pasta, wine" />
+  <title>Vino & Amore | Reservations</title>
+
+  <link rel="stylesheet" href="reservations_style.css" />
+</head>
+
+<body>
+<!-- Header + Nav -->
+<header>
+  <div class="name">
+    <a class="logo-link" href="home.html">Vino & Amore</a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="wine.html">Wine List</a></li>
+      <li><a href="specials.html">Specials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="res-hero">
+    <div class="hero-text">
+      <h1>Reserve a Table</h1>
+      <p class="subtitle">Book your experience-fresh pasta, 
+        warm hospitality, and a great glass of wine.</p>
+    </div>
+
+    <div class="hero-image" aria-label="Restaurant dining room image placeholder"></div>
+  </section>
+
+  <!-- Content + Form (2-column layout) -->
+  <section class="res-container">
+    <!-- Left: info -->
+    <div class="res-left">
+      <h2>We Look Forward to Hosting You</h2>
+      <p class="lead">
+        For parties of <strong>8 or more</strong>, please call us directly at <strong>(617) 555-0199</strong>.
+        We also offer private dining for special occasions.
+      </p>
+
+      <div class="info-card">
+        <h3>Dinner Service</h3>
+        <ul class="info-list">
+          <li><strong>Mon-Tue:</strong> 5:00 PM - 10:00 PM</li>
+          <li><strong>Wed:</strong> Closed</li>
+          <li><strong>Thur:</strong> 5:00 PM - 10:00 PM</li>
+          <li><strong>Fri-Sun:</strong> 5:00 PM - 10:30 PM</li>
+
+        </ul>
+
+        <h3>Dress Code</h3>
+        <p>Please wear closed-toe shoes and avoid wearing athletic wear</p>
+
+        <h3>Cancellation Policy</h3>
+        <p>While you won't be charged if you need to cancel, 
+          we ask that you do so at least 24 hours in advance.</p>
+      </div>
+    </div>
+
+    <!-- Right: reservation form -->
+    <div class="res-right">
+      <h2 id="reservationForm">Request a Table</h2>
+      <p class="small">Fill in the details below to complete your reservation.</p>
+
+      <form id="resForm" novalidate>
+        <div class="two-col">
+          <div class="form-row">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First name" />
+            <small class="error" id="errFirst"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last name" />
+            <small class="error" id="errLast"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+          <small class="error" id="errEmail"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(###) ###-####" />
+          <small class="error" id="errPhone"></small>
+        </div>
+
+        <div class="two-col">
+          <div class="form-row">
+            <label for="date">Date *</label>
+            <input type="date" id="date" name="date" />
+            <small class="error" id="errDate"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="time">Time *</label>
+            <select id="time" name="time">
+              <option value="">Select a time</option>
+              <option>5:00 PM</option>
+              <option>5:30 PM</option>
+              <option>6:00 PM</option>
+              <option>6:30 PM</option>
+              <option>7:00 PM</option>
+              <option>7:30 PM</option>
+              <option>8:00 PM</option>
+              <option>8:30 PM</option>
+              <option>9:00 PM</option>
+              <option>9:30 PM</option>
+            </select>
+            <small class="error" id="errTime"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="guests">Guests *</label>
+          <select id="guests" name="guests">
+            <option value="">Number of guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+          </select>
+          <small class="error" id="errGuests"></small>
+        </div>
+
+        <!-- Extra form types (nice for rubric + realism) -->
+        <fieldset class="form-row">
+          <legend>Seating Preference</legend>
+          <label class="inline">
+            <input type="radio" name="seating" value="indoor" checked />
+            Indoor
+          </label>
+          <label class="inline">
+            <input type="radio" name="seating" value="outdoor" />
+            Outdoor
+          </label>
+        </fieldset>
+
+        <div class="form-row">
+          <label for="requests">Special Requests</label>
+          <textarea id="requests" name="requests" rows="4" placeholder="Allergies, celebrations, accessibility needs..."></textarea>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label>
+            <input type="checkbox" id="agree" />
+            I understand the cancellation policy.
+          </label>
+          <small class="error" id="errAgree"></small>
+        </div>
+
+        <button type="submit" class="btn-dark">Confirm Reservation</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- Footer (same pattern as contacts.html) -->
+<footer>
+  <h3>Contact Us</h3>
+
+  <p>📍 123 Newbury Street, Boston, MA</p>
+  <p>📞 (617) 123-4567</p>
+
+  <p>🕒 Mon-Thu: 11:00 AM - 9:00 PM</p>
+  <p>Fri-Sat: 11:00 AM - 11:00 PM</p>
+  <p>Sun: Closed</p>
+
+  <div class="footer-bottom">
+    © 2026 Vino & Amore. All rights reserved.
+  </div>
+</footer>
+
+<!-- JS validation + thank-you alert -->
+<script>
+  function isValidEmail(email) {
+    return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.trim());
+  }
+
+  function setError(inputEl, errEl, msg) {
+    errEl.textContent = msg;
+    if (msg) inputEl.classList.add("input-error");
+    else inputEl.classList.remove("input-error");
+  }
+
+  function todayISO() {
+    const d = new Date();
+    d.setHours(0,0,0,0);
+    return d;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("resForm");
+
+    const firstName = document.getElementById("firstName");
+    const lastName  = document.getElementById("lastName");
+    const email     = document.getElementById("email");
+    const phone     = document.getElementById("phone");
+    const date      = document.getElementById("date");
+    const time      = document.getElementById("time");
+    const guests    = document.getElementById("guests");
+    const agree     = document.getElementById("agree");
+
+    const errFirst  = document.getElementById("errFirst");
+    const errLast   = document.getElementById("errLast");
+    const errEmail  = document.getElementById("errEmail");
+    const errPhone  = document.getElementById("errPhone");
+    const errDate   = document.getElementById("errDate");
+    const errTime   = document.getElementById("errTime");
+    const errGuests = document.getElementById("errGuests");
+    const errAgree  = document.getElementById("errAgree");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let ok = true;
+
+      // Clear previous errors
+      [
+        [firstName, errFirst], [lastName, errLast], [email, errEmail],
+        [phone, errPhone], [date, errDate], [time, errTime],
+        [guests, errGuests]
+      ].forEach(([el, err]) => setError(el, err, ""));
+      errAgree.textContent = "";
+
+      if (firstName.value.trim() === "") { setError(firstName, errFirst, "First name is required."); ok = false; }
+      if (lastName.value.trim() === "")  { setError(lastName,  errLast,  "Last name is required.");  ok = false; }
+
+      if (!isValidEmail(email.value)) { setError(email, errEmail, "Please enter a valid email."); ok = false; }
+
+      const digits = phone.value.replace(/\\D/g, "");
+      if (digits.length < 10) { setError(phone, errPhone, "Please enter a valid phone number."); ok = false; }
+
+      if (!date.value) {
+        setError(date, errDate, "Please choose a date.");
+        ok = false;
+      } else {
+        const chosen = new Date(date.value + "T00:00:00");
+        if (chosen < todayISO()) {
+          setError(date, errDate, "Date cannot be in the past.");
+          ok = false;
+        }
+      }
+
+      if (time.value === "") { setError(time, errTime, "Please choose a time."); ok = false; }
+      if (guests.value === "") { setError(guests, errGuests, "Please select number of guests."); ok = false; }
+
+      if (!agree.checked) {
+        errAgree.textContent = "Please confirm you've read and understood the cancellation policy.";
+        ok = false;
+      }
+
+      // Simple “party size” note (matches the reference concept)
+      if (ok && parseInt(guests.value, 10) >= 8) {
+        alert("For parties of 8 or more, please call us at (617) 555-0199 to arrange your reservation.");
+        return;
+      }
+
+      if (ok) {
+        alert("Thank you! Your reservation request was received. We will confirm shortly by email or phone.");
+        form.reset();
+      }
+    });
+  });
+</script>
+</body>
+</html>
