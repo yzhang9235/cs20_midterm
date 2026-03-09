@@ -146,3 +146,15 @@ footer p {
     font-size: 12px;
     color: #cccccc;
 }
+
+/* Responsive down to 400px */
+@media (max-width: 700px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

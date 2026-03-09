@@ -174,7 +174,7 @@
 
 // error pop for invalid inputs in the form
 // reference: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
 
     const fullName = document.getElementById("fullName");
@@ -188,48 +188,48 @@
     const errMessage = document.getElementById("errMessage");
 
     function clearError(inputEl, errEl) {
-      errEl.textContent = "";
-      inputEl.classList.remove("input-error");
+        errEl.textContent = "";
+        inputEl.classList.remove("input-error");
     }
 
     function setError(inputEl, errEl, msg) {
-      errEl.textContent = msg;
-      inputEl.classList.add("input-error");
+        errEl.textContent = msg;
+        inputEl.classList.add("input-error");
     }
 
     form.addEventListener("submit", (e) => {
-      e.preventDefault();
+        e.preventDefault();
 
-      // clear old errors
-      [ [fullName, errName], [email, errEmail], [subject, errSubject], [message, errMessage] ]
-        .forEach(([input, err]) => clearError(input, err));
+        // clear old errors
+        [ [fullName, errName], [email, errEmail], [subject, errSubject], [message, errMessage] ]
+            .forEach(([input, err]) => clearError(input, err));
 
-      let ok = true;
+        let ok = true;
 
-      if (fullName.value.trim() === "") {
-        setError(fullName, errName, "Please enter your name.");
-        ok = false;
-      }
+        if (fullName.value.trim() === "") {
+            setError(fullName, errName, "Please enter your name.");
+            ok = false;
+        }
 
-      if (!isValidEmail(email.value)) {
-        setError(email, errEmail, "Please enter a valid email.");
-        ok = false;
-      }
+        if (!isValidEmail(email.value)) {
+            setError(email, errEmail, "Please enter a valid email.");
+            ok = false;
+        }
 
-      if (subject.value === "") {
-        setError(subject, errSubject, "Please choose a subject.");
-        ok = false;
-      }
+        if (subject.value === "") {
+            setError(subject, errSubject, "Please choose a subject.");
+            ok = false;
+        }
 
-      if (message.value.trim().length < 10) {
-        setError(message, errMessage, "Message should be at least 10 characters.");
-        ok = false;
-      }
+        if (message.value.trim().length < 10) {
+            setError(message, errMessage, "Message should be at least 10 characters.");
+            ok = false;
+        }
 
-      if (ok) {
-        alert("Thank you! We received your message and will get back to you soon.");
-        form.reset();
-      }
+        if (ok) {
+            alert("Thank you! We received your message and will get back to you soon.");
+            form.reset();
+        }
     });
   });
 </script>

@@ -192,7 +192,7 @@
 <!-- JS validation + thank-you alert -->
 <script>
   function isValidEmail(email) {
-    return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.trim());
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   }
 
   function setError(inputEl, errEl, msg) {
