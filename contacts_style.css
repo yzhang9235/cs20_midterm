@@ -1,19 +1,19 @@
-/* initilization for all contents */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', serif; /* Classic elegant feel */
+    font-family: 'Times New Roman', serif; 
 }
 
-/* Header and Navigation */
+
 header {
     background-color: #ffffff;
     padding: 30px 0;
     text-align: center;
 }
 
-/* for the big title name */
+
 .name {
     text-decoration: none;
     font-family: 'Times New Roman', serif; 
@@ -26,7 +26,7 @@ header {
     animation: fadeInDown 1.5s ease-out;
 }
 
-/* add a fade in animation for title */
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -38,7 +38,7 @@ header {
     }
 }
 
-/* navigation bar */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -66,7 +66,7 @@ nav ul li a:hover {
     padding-bottom: 5px;
 }
 
-/* image zoom in */
+
 @keyframes imageZoomIn {
     from {
         transform: scale(1.1); 
@@ -122,7 +122,7 @@ h1 {
     color: #000000;
 }
 
-/* Footer Section */
+
 footer {
     background-color: #2c2c2c;
     color: #ffffff;
@@ -148,14 +148,12 @@ footer p {
     color: #cccccc;
 }
 
-/* Make header a fixed page element (sticky) */
 header {
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
-/* Logo link inside .name */
 .logo-link {
   text-decoration: none;
   color: inherit;
@@ -167,7 +165,7 @@ nav ul li a.active {
   padding-bottom: 5px;
 }
 
-/* Contact page */
+
 .page-subtitle {
   margin-top: 10px;
   color: #666;
@@ -226,7 +224,7 @@ nav ul li a.active {
   border: 0;
 }
 
-/* Form styling */
+
 .contact-right {
   border: 1px solid #eee;
   padding: 20px;
@@ -304,7 +302,7 @@ body {
   background-attachment: fixed;  
 }
 
-/* Responsive down to 400px */
+
 @media (max-width: 700px) {
   .contact-container {
     grid-template-columns: 1fr;

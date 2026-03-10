@@ -10,7 +10,6 @@
 </head>
 
 <body>
-<!-- Header + Nav -->
 <header>
         <a href="home.html" class="name" >Vino & Amore</a>
         <nav>
@@ -29,7 +28,7 @@
 
 
 <main>
-  <!-- Hero -->
+
   <section class="res-hero">
     <div class="hero-text">
       <h1>Reserve a Table</h1>
@@ -40,9 +39,9 @@
     <div class="hero-image" aria-label="Restaurant dining room image placeholder"></div>
   </section>
 
-  <!-- Content + Form (2-column layout) -->
+  
   <section class="res-container">
-    <!-- Left: info -->
+    
     <div class="res-left">
       <h2>We Look Forward to Hosting You</h2>
       <p class="lead">
@@ -69,7 +68,7 @@
       </div>
     </div>
 
-    <!-- Right: reservation form -->
+    
     <div class="res-right">
       <h2 id="reservationForm">Request a Table</h2>
       <p class="small">Fill in the details below to complete your reservation.</p>
@@ -142,7 +141,7 @@
           <small class="error" id="errGuests"></small>
         </div>
 
-        <!-- Extra form types (nice for rubric + realism) -->
+        
         <fieldset class="form-row">
           <legend>Seating Preference</legend>
           <label class="inline">
@@ -174,7 +173,6 @@
   </section>
 </main>
 
-<!-- Footer (same pattern as contacts.html) -->
 <footer>
   <h3>Contact Us</h3>
 
@@ -190,7 +188,7 @@
   </div>
 </footer>
 
-<!-- JS validation + thank-you alert -->
+
 <script>
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
@@ -268,7 +266,7 @@
         ok = false;
       }
 
-      // Simple “party size” note (matches the reference concept)
+      // Simple “party size” note
       if (ok && parseInt(guests.value, 10) >= 8) {
         alert("For parties of 8 or more, please call us at (617) 555-0199 to arrange your reservation.");
         return;
