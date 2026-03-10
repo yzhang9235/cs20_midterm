@@ -1,0 +1,152 @@
+[
+	{
+		"section": "Appetizers",
+		"items": [
+			{
+				"name": "Bruschetta al Pomodoro",
+				"description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
+				"price": 8
+			},
+			{
+				"name": "Calamari Fritti",
+				"description": "Lightly fried calamari served with marinara sauce.",
+				"price": 12
+			},
+			{
+				"name": "Caprese Salad",
+				"description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
+				"price": 10
+			},
+			{
+				"name": "Caripacio di Manzo",
+				"description": "Thinly sliced raw beef with arugula, parmesan, and lemon dressing.",
+				"price": 14
+			},
+			{
+				"name": "Antipasot della casa",
+				"description": "Chef's selection of cured meats, cheeses, olives, and marinated vegetables",
+				"price": 16
+			}
+		]
+	},
+	{
+		"section": "Pasta",
+		"items": [
+			{
+				"name": "Pappardelle al Ragu",
+				"description": "Hand-cut pappardelle with slow-braised beef and pork ragu",
+				"price": 26
+			},
+			{
+				"name": "Cacio e Pepe",
+				"description": "Tonnarelli with Pecorino Romano and freshly cracked black pepper",
+				"price": 22
+			},
+			{
+				"name": "Linguine alle Vongole",
+				"description": "Linguine with fresh clams, white wine, garlic, and parsley",
+				"price": 28
+			},
+			{
+				"name": "Ravioli di Ricotta",
+				"description": "Handmade ravioli filled with ricotta and spinach in sage butter",
+				"price": 24
+			},
+			{
+				"name": "Tagliatelle al Tartufo",
+				"description": "Fresh tagliatelle with black truffle cream, mushrooms, and parmesan",
+				"price": 32
+			},
+			{
+				"name": "Lasagna della Nonna",
+				"description": "Traditional layered lasagna with bolognese, bechamel, and mozzarella",
+				"price": 24
+			}
+		]
+	},
+	{
+		"section": "Pizza",
+		"items": [
+			{
+				"name": "Margherita DOP",
+				"description": "San Marzano tomatoes, mozzarella di bufala, fresh basil, extra virgin olive oil",
+				"price": 18
+			},
+			{
+				"name": "Diavola",
+				"description": "Spicy salami, mozzarella, San Marzano tomatoes, Calabrian chili",
+				"price": 20
+			},
+			{
+				"name": "Quattro Formaggi",
+				"description": "Mozzarella, gorgonzola, fontina, and parmesan with honey drizzle",
+				"price": 21
+			},
+			{
+				"name": "Prosciutto e Rucola",
+				"description": "Prosciutto di Parma, arugula, mozzarella, shaved parmesan",
+				"price": 22
+			},
+			{
+				"name": "Funghi e Tartufo",
+				"description": "Wild mushroom medley, truffle oil, mozzarella, and thyme",
+				"price": 23
+			}
+		]
+	},
+	{
+		"section": "Secondi",
+		"items": [
+			{
+				"name": "Branzino al Forno",
+				"description": "Oven-roasted Mediterranean sea bass with lemon, capers, and roasted potatoes",
+				"price": 36
+			},
+			{
+				"name": "Ossobuco alla Milanese",
+				"description": "Braised veal shank with saffron risotto and gremolata",
+				"price": 38
+			},
+			{
+				"name": "Pollo alla Parmigiana",
+				"description": "Breaded chicken breast with tomato sauce, mozzarella, and fresh basil",
+				"price": 28
+			},
+			{
+				"name": "Bistecca alla Fiorentina",
+				"description": "Grilled 32oz T-bone steak, Tuscan style, with rosemary and garlic",
+				"price": 68
+			},
+			{
+				"name": "Saltimbocca alla Romana",
+				"description": "Veal medallions with prosciutto and sage in white wine reduction",
+				"price": 34
+			}
+		]
+	},
+	{
+		"section": "Dolci",
+		"items": [
+			{
+				"name": "Tiramisu della Casa",
+				"description": "Our signature tiramisu with mascarpone, espresso, and cocoa",
+				"price": 14
+			},
+			{
+				"name": "Panna Cotta",
+				"description": "Vanilla bean panna cotta with seasonal berry compote",
+				"price": 12
+			},
+			{
+				"name": "Cannoli Siciliani",
+				"description": "Crispy shells filled with sweet ricotta, chocolate chips, and pistachios",
+				"price": 13
+			},
+			{
+				"name": "Affogato",
+				"description": "Vanilla gelato drowned in a shot of hot espresso",
+				"price": 10
+			}
+		]
+	}
+]
